@@ -1,0 +1,2 @@
+http://localhost/foo?some=junk&query=this+is+a+test&userid=1234
+http://localhost/foo?query=how+did+I+get+here&more=junk&userid=2345
