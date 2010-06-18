@@ -33,7 +33,6 @@ public class QuerystringLoader extends Utf8StorageConverter implements LoadFunc 
 		//resourceStr += "/PigLineRecordReader.class";
 		resourceStr = "/" + resourceStr;
 		URL resource = getClass().getResource(resourceStr);
-		System.out.println("In is a " + in.getClass() + " at " + resource + "(" + resourceStr + ")");
 		this.in = new PigLineRecordReader(in, offset, end);
 		this.end = end;
 
@@ -62,7 +61,7 @@ public class QuerystringLoader extends Utf8StorageConverter implements LoadFunc 
 		return map;
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")	
 	@Override
 	public Tuple getNext() throws IOException {
 		if (in == null || in.getPosition() > end) {

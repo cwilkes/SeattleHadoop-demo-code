@@ -1,6 +1,6 @@
 package org.seattlehadoop.demo.pig.udf;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.Calendar;
@@ -10,8 +10,6 @@ import org.apache.pig.data.DefaultTuple;
 import org.apache.pig.data.Tuple;
 import org.junit.Before;
 import org.junit.Test;
-import org.seattlehadoop.demo.pig.udf.DateBin;
-import org.seattlehadoop.demo.pig.udf.DateBinUtils;
 
 public class DateBinTest {
 
@@ -27,7 +25,7 @@ public class DateBinTest {
 
 	private Tuple makeTuple(Date date, int delta) {
 		DefaultTuple ret = new DefaultTuple();
-		ret.append(DateBinUtils.df.format(date));
+		ret.append(DateBin.df.format(date));
 		ret.append((Integer) delta);
 		return ret;
 	}

@@ -79,6 +79,9 @@ public class BestBook extends EvalFunc<Tuple> implements Algebraic {
 		Tuple ret = m_tupleFactory.newTuple(2);
 		ret.set(0, bestReviewer);
 		ret.set(1, bestScore);
+		if (true) {
+			return ret;
+		}
 		DataBag bag = m_bagFactory.newDefaultBag();
 		bag.add(ret);
 		return m_tupleFactory.newTuple(bag);
